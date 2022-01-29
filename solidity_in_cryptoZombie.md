@@ -195,3 +195,33 @@ contract ZombieFactory {
     }
 }
 ```
+## Chapter 10: What Do Zombies Eat? (Interacting with other contracts)
+>It's time to feed our zombies! And what do zombies like to eat most?
+>
+>Well it just so happens that CryptoZombies love to eat...
+>
+>CryptoKitties! 😱😱😱
+>
+>(Yes, I'm serious 😆 )
+>
+>In order to do this we'll need to read the kittyDna from the CryptoKitties smart contract. We can do that because the CryptoKitties data is stored openly on the blockchain. >Isn't the blockchain cool?!
+>
+>Don't worry — our game isn't actually going to hurt anyone's CryptoKitty. We're only reading the CryptoKitties data, we're not able to actually delete it 😉
+>
+### Interacting with other contracts
+>For our contract to talk to another contract on the blockchain that we don't own, first we need to define an interface.
+>
+>Let's look at a simple example. Say there was a contract on the blockchain that looked like this:
+```
+contract LuckyNumber {
+  mapping(address => uint) numbers;
+
+  function setNum(uint _num) public {
+    numbers[msg.sender] = _num;
+  }
+
+  function getNum(address _myAddress) public view returns (uint) {
+    return numbers[_myAddress];
+  }
+}
+```
