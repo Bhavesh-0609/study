@@ -26,3 +26,20 @@
 >   5. Must withstand collisions
 
 >![image](https://user-images.githubusercontent.com/92302123/151661334-089aa1a6-4eca-4e62-b45b-7a7d379ebafe.png)
+## Immutable ledger
+>The word Immutable means “cannot be changed.” And ledger is a fancy term for record, a record of something. Therefore an Immutable Ledger is a record that cannot be changed. In the digital age we need data security and proof that the data has not been altered -- that's the only way we can trust the digital data.
+## Distributed P2P network
+>Peer-to-peer (P2P) computing or networking is a distributed application architecture that partitions tasks or workloads between peers. Peers are equally privileged, equipotent participants in the application. They are said to form a peer-to-peer network of nodes.
+>
+>![image](https://user-images.githubusercontent.com/92302123/151701890-8a28c982-5bf3-4429-847f-41e990b641ed.png)
+## nonce 
+>What is nonce used for?
+>A nonce in cryptography is a number used to protect private communications by preventing replay attacks. Nonces are random or pseudo-random numbers that authentication protocols attach to communications.
+## Byzantine fault tolerance
+> ![image](https://user-images.githubusercontent.com/92302123/151703887-584c2444-0d1a-4a74-b295-984d8103e640.png)
+>
+> https://people.eecs.berkeley.edu/~satishr/cs273.01/p382-lamport.pdf
+>
+>![image](https://user-images.githubusercontent.com/92302123/151703948-79917e7a-79ca-4617-9054-22e7c7d50840.png)
+>
+>https://medium.com/loom-network/understanding-blockchain-fundamentals-part-1-byzantine-fault-tolerance-245f46fe8419
