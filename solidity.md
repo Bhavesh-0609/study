@@ -112,3 +112,28 @@ contract Inbox{ // define a new contract (remmember classes!) that will have som
 > Mnemonic to public/private and address converter : https://iancoleman.io/bip39/
 ## Getting more test ether (0.1 ether in one request in Rinkenby account)
 > https://faucets.chain.link/rinkeby
+# 2. Smart contract with solidity
+## Boilerplate requirements
+> ![image](https://user-images.githubusercontent.com/92302123/152022962-d968ba76-ce9f-4221-a8e8-a3e331b3d45d.png)
+## Project file walk through
+>![image](https://user-images.githubusercontent.com/92302123/152027928-b69b08f4-e150-4fb4-92b1-7e922ebd6734.png)
+>   1. create any directory
+>   2. open git in directory
+>       - npm init (Dont change anything just enter enter)
+>       - npm init will create package.json file
+>   3. in directory create folder named 'contract'
+>       - in contract folder create inbox.sol
+>   4. compiling solidity -title
+>       - in main directory open git bash and enter "npm install solc@0.4.17"
+>       - now create compile.js file in main directory
+>           - in compile.js write this code
+``` 
+const path = require('path');
+const fs = require('fs');
+const solc = require('solc');
+
+const inboxPath = path.resolve(__dirname, 'contracts', 'inbox.sol');
+const source = fs.readFileSync(inboxPath, 'utf8');
+
+console.log(solc.compile(source, 1));
+```
