@@ -43,3 +43,37 @@
 >![image](https://user-images.githubusercontent.com/92302123/151703948-79917e7a-79ca-4617-9054-22e7c7d50840.png)
 >
 >https://medium.com/loom-network/understanding-blockchain-fundamentals-part-1-byzantine-fault-tolerance-245f46fe8419
+# Create a blockchain
+## Step 1
+>   - Install anaconda and launch spyder
+## Step 2
+>   - Open anaconda prompt and install flask. command = "pip install Flask==0.12.2"
+>   - Download postman
+## Step 3
+>   - Importing the libraries
+>     - import datetime
+>     - import hashlib
+>     - import json
+>     - from flask import Flask, jsonify
+## Step 4
+```
+# Module 1 - Create a blockchain
+
+# To be installed:
+    # Flask==0.12.2: pip install Flask==0.12.2
+    # Postman HTTP client: https://www.getpostman.com
+
+# importing the libraries
+import datetime
+import hashlib
+import json
+from flask import Flask, jsonify
+
+# Part 1 - Building a blockchain
+
+class Blockchain:
+    
+    def __init__(self):
+        self.chain = [] # created an empty chain
+        self.create_block(proof = 1, previous_hash = '0') # creating genesis block(first block)
+```
