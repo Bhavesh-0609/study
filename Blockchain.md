@@ -459,101 +459,112 @@ def mine_block():
 ```
 ## Step 11
 ```
-# Module 1 - Create a blockchain
+# Module 1 - Create a Blockchain
 
 # To be installed:
-    # Flask==0.12.2: pip install Flask==0.12.2
-    # Postman HTTP client: https://www.getpostman.com
+# Flask==0.12.2: pip install Flask==0.12.2
+# Postman HTTP Client: https://www.getpostman.com/
 
-# importing the libraries
+# Importing the libraries
 import datetime
 import hashlib
 import json
 from flask import Flask, jsonify
 
-# Part 1 - Building a blockchain
+# Part 1 - Building a Blockchain
 
 class Blockchain:
+
     def __init__(self):
-        self.chain = [] # created an empty chain
-        self.create_block(proof = 1, previous_hash = '0') # creating genesis block(first block)
+        self.chain = []
+        self.create_block(proof = 1, previous_hash = '0')
 
     def create_block(self, proof, previous_hash):
         block = {'index': len(self.chain) + 1,
                  'timestamp': str(datetime.datetime.now()),
                  'proof': proof,
-                 'previous_hash': previous_hash} # creating block with dictionary
-        self.chain.append(block) # adding created block in  list
-        return block # returning created block for postman
-    
+                 'previous_hash': previous_hash}
+        self.chain.append(block)
+        return block
+
     def get_previous_block(self):
         return self.chain[-1]
-    
+
     def proof_of_work(self, previous_proof):
-        new_proof = 1 # creating new proof variable and assigning default value = 1
-        
+        new_proof = 1
         check_proof = False
         while check_proof is False:
-            hash_operation = hashlib.sha256(str(new_proof**2 - previous_proof**2).encode()).hexdigest() # solving problem and creating hash
-            if hash_operation[0:4] == '0000': # validing generated hash
+            hash_operation = hashlib.sha256(str(new_proof**2 - previous_proof**2).encode()).hexdigest()
+            if hash_operation[:4] == '0000':
                 check_proof = True
             else:
                 new_proof += 1
         return new_proof
     
     def hash(self, block):
-        encoded_block = json.dumps(block, sort_keys = True).encode() # coverting block in string
-        return hashlib.sha256(encoded_block).hexdigest() # converting block string in hash
+        encoded_block = json.dumps(block, sort_keys = True).encode()
+        return hashlib.sha256(encoded_block).hexdigest()
     
     def is_chain_valid(self, chain):
-        # authanticating blockchain
         previous_block = chain[0]
         block_index = 1
         while block_index < len(chain):
-            # validating hash
             block = chain[block_index]
             if block['previous_hash'] != self.hash(previous_block):
                 return False
-            # validating proof
             previous_proof = previous_block['proof']
             proof = block['proof']
             hash_operation = hashlib.sha256(str(proof**2 - previous_proof**2).encode()).hexdigest()
-            if hash_operation[0:4] != '0000':
+            if hash_operation[:4] != '0000':
                 return False
-            # incrementing index and previous block
             previous_block = block
             block_index += 1
         return True
 
-# Part 2 - Mining our blockchain
+# Part 2 - Mining our Blockchain
 
-# Creating a web app
+# Creating a Web App
 app = Flask(__name__)
+app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 
-# Creating a blockchain
+# Creating a Blockchain
 blockchain = Blockchain()
-
+@app.route('/')
+def home():
+    return "hello world"
 # Mining a new block
-@app.route('/mine_block', methods=['Get'])
+@app.route('/mine_block', methods = ['GET'])
 def mine_block():
-    previous_block = blockchain.get_previous_block() # getting previous block
-    previous_proof = previous_block['proof'] # getting previous proof
-    proof = blockchain.proof_of_work(previous_proof) # getting proof
-    previous_hash = blockchain.hash(previous_block) # getting previous hash
-    block = blockchain.create_block(proof, previous_hash) # getting block
+    previous_block = blockchain.get_previous_block()
+    previous_proof = previous_block['proof']
+    proof = blockchain.proof_of_work(previous_proof)
+    previous_hash = blockchain.hash(previous_block)
+    block = blockchain.create_block(proof, previous_hash)
     response = {'message': 'Congratulations, you just mined a block!',
                 'index': block['index'],
                 'timestamp': block['timestamp'],
                 'proof': block['proof'],
-                'previous_hash': block['previous_hash']} # creating response dictionary
+                'previous_hash': block['previous_hash']}
     return jsonify(response), 200
 
-# Getting the full blockchain
-@app.route('/get_chain', methods=['Get'])
+# Getting the full Blockchain
+@app.route('/get_chain')
 def get_chain():
-    # getting chain list from blockchain class and length of chain
-    response = {'chain': blockchain.chain,
+    try:
+        response = {'chain': blockchain.chain,
                 'length': len(blockchain.chain)}
+        return jsonify(response)
+    except:
+        return jsonify({"error":"Error occured"})
+
+# Checking if the Blockchain is valid
+@app.route('/is_valid', methods = ['GET'])
+def is_valid():
+    is_valid = blockchain.is_chain_valid(blockchain.chain)
+    if is_valid:
+        response = {'message': 'All good. The Blockchain is valid.'}
+    else:
+        response = {'message': 'Houston, we have a problem. The Blockchain is not valid.'}
     return jsonify(response), 200
 
 # Running the app
