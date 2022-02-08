@@ -135,5 +135,23 @@ const solc = require('solc');
 const inboxPath = path.resolve(__dirname, 'contracts', 'inbox.sol');
 const source = fs.readFileSync(inboxPath, 'utf8');
 
-console.log(solc.compile(source, 1));
+module.exports = solc.compile(source, 1).contracts[':Inbox'];
+```
+>like this
+>![image](https://user-images.githubusercontent.com/92302123/153046535-9c291678-4195-4b1e-96aa-d4533a04a76a.png)
+## Compiling process
+>![image](https://user-images.githubusercontent.com/92302123/153047551-0db31d07-f602-4c52-9cce-dc1523b27774.png)
+## Testing architecture
+>![image](https://user-images.githubusercontent.com/92302123/153048407-4b2cb63b-1b0b-4314-be8e-8554e9830d6d.png)
+>
+> ganache is like local test network
+>
+> Web3 is kind of our portal into (solidity) what is going on on this local test network.
+>   - web3 latest version is starting from 1
+## Installing some modules
+> mocha is testing framework
+>
+> For installing mocha, ganache and web3 run this command in working directory
+```
+npm install mocha ganache-cli web3
 ```
