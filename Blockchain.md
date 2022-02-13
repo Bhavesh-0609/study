@@ -598,4 +598,12 @@ app.run(host = '0.0.0.0', port = 5000)
 >
 >![image](https://user-images.githubusercontent.com/92302123/153757506-ee0837ce-dc3e-48cc-9e42-c284825fd8f4.png)
 >
->
+## Understanding mining difficulty
+> Here difficulty is find a hash who have 18 leading zeros.
+> 
+> And the answer is below.
+> 
+> ![image](https://user-images.githubusercontent.com/92302123/153763015-27f5af70-befa-44bd-9741-de5a36620f62.png)
+
+> ### Fist mining difficulty of bitcoin
+>![image](https://user-images.githubusercontent.com/92302123/153764348-70bd17c8-999b-40af-ad98-c2450efcca93.png)
