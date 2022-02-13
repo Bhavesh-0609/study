@@ -570,3 +570,18 @@ def is_valid():
 # Running the app
 app.run(host = '0.0.0.0', port = 5000)
 ```
+# Cryptocurrency Intuition
+## What we will learn in this section:
+>   1. What is Bitcoin?
+>   2. Bitcoin's monetary policy
+>   3. Understanding mining difficulty
+>   4. Virtual tour of a bitcoin mine
+>   5. Mining pools
+>   6. Nonce range
+>   7. How miners pick transactions (Part 1)
+>   8. How miners pick transactions (Part 2)
+>   9. CPUs vs GPUs vs ASICs
+>   10. How do mempools work?
+>   11. Orphaned blocks
+>   12. The 51% attack
+>   13. Extra: Bits to target conversion
