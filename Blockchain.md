@@ -570,7 +570,7 @@ def is_valid():
 # Running the app
 app.run(host = '0.0.0.0', port = 5000)
 ```
-# Cryptocurrency Intuition
+# Cryptocurrency Intuition 
 ## What we will learn in this section:
 >   1. What is Bitcoin?
 >   2. Bitcoin's monetary policy
@@ -586,4 +586,16 @@ app.run(host = '0.0.0.0', port = 5000)
 >   12. The 51% attack
 >   13. Extra: Bits to target conversion
 ## What is Bitcoin?
+>![image](https://user-images.githubusercontent.com/92302123/153756190-3b13d9cf-bcfd-4c4c-9ff7-3f5f9c4b5c88.png)
+>
+> Bitcoin is invented in 2008 by a person who were operating under the name `Satoshi nakamoto`
+> 
+> ![image](https://user-images.githubusercontent.com/92302123/153756971-24362162-c5c5-4d04-a2ba-f943abb9c525.png)
+## Bitcoin's monetary policy
+>![image](https://user-images.githubusercontent.com/92302123/153757113-621a0b9a-3307-4ec0-b1cc-30bbef4a7ba1.png)
+>
+>![image](https://user-images.githubusercontent.com/92302123/153757399-17db3cb1-0efc-48a4-84f9-3a1b8f682b28.png)
+>
+>![image](https://user-images.githubusercontent.com/92302123/153757506-ee0837ce-dc3e-48cc-9e42-c284825fd8f4.png)
+>
 >
