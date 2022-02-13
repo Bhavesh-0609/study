@@ -585,3 +585,5 @@ app.run(host = '0.0.0.0', port = 5000)
 >   11. Orphaned blocks
 >   12. The 51% attack
 >   13. Extra: Bits to target conversion
+## What is Bitcoin?
+>
