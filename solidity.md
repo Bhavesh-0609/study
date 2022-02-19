@@ -255,3 +255,28 @@ like this
 // for running test u can write this command in terminal
 // npm run test
 ```
+## Mocha structure
+>![image](https://user-images.githubusercontent.com/92302123/154803131-6763220a-bd67-4b64-af9e-a1280f83c3e9.png)
+## Fetching accounts from ganache
+>![image](https://user-images.githubusercontent.com/92302123/154803994-e86c2748-8dc3-4203-8c72-0541cdb57da8.png)
+```
+const assert = require('assert');
+const ganache = require('ganache-cli');
+const Web3 = require('web3'); // Web3 is constructor (W is capital its describe that Web3 is a constructor)
+const web3 = new Web3(ganache.provider()); // connecting with ganache using provider, here web3 is instance
+
+beforeEach(() => {
+    // Get a list of all accounts
+    web3.eth.getAccounts()
+        .then(fetchedAccounts => {
+            console.log(fetchedAccounts);
+        });
+    // Use one of those accounts to deploy the contract
+});
+
+describe('Inbox', ()=>{
+    it('deploys a contract', () => {
+        
+    });
+});
+```
