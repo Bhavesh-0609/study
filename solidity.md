@@ -155,3 +155,12 @@ module.exports = solc.compile(source, 1).contracts[':Inbox'];
 ```
 npm install mocha ganache-cli web3
 ```
+## Web3 versioning
+![image](https://user-images.githubusercontent.com/92302123/154801151-71f68f63-da95-4041-bbf2-1ca7e00d7c0e.png)
+## Web3 providers
+```
+const assert = require('assert');
+const ganache = require('ganache-cli');
+const Web3 = require('web3'); // Web3 is constructor (W is capital)
+const web3 = new Web3(ganache.provider()); // connecting with ganache using provider
+```
