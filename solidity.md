@@ -164,3 +164,94 @@ const ganache = require('ganache-cli');
 const Web3 = require('web3'); // Web3 is constructor (W is capital)
 const web3 = new Web3(ganache.provider()); // connecting with ganache using provider
 ```
+## Testing with mocha
+> Mocha is a test running framework.
+>
+>### Mocha functions
+>![image](https://user-images.githubusercontent.com/92302123/154801718-6196669f-fb18-4ec4-a34f-17f202a1e81b.png)
+>
+> For using mocha test u have to write mocha in package.json
+```
+"scripts":{
+    "test":"mocha"
+}
+```
+>This is a test code u can write it in inbox.test.js
+```
+class Car{
+    park(){
+        return 'stopped';
+    }
+
+    drive(){
+        return 'vroom';
+    }
+}
+
+
+let car;
+beforeEach(()=>{
+    car = new Car();
+})
+
+describe('Car',() => { // we can write any thing in string, its for our conviniance
+    it('can park',() => {// we can write any thing in string, its for our conviniance
+        // const car = new Car(); // beforeEach is replacing this
+        assert.equal(car.park(),'stopped'); // for using assert require assert library
+    });
+
+    it('can drive', () =>{
+        // const car = new Car(); // beforeEach is replacing this
+        assert.equal(car.drive(),'vroom');
+    });
+});
+```
+> for running test u can write this command in terminal `npm run test`
+> 
+> The full code is belowe
+```
+const assert = require('assert');
+const ganache = require('ganache-cli');
+const Web3 = require('web3'); // Web3 is constructor (W is capital)
+const web3 = new Web3(ganache.provider()); // connecting with ganache using provider
+
+
+class Car{
+    park(){
+        return 'stopped';
+    }
+
+    drive(){
+        return 'vroom';
+    }
+}
+
+
+let car;
+beforeEach(()=>{ // beforeEach is always execute before 'it' will execute
+    car = new Car(); // you can write anything that is same in all it
+})
+
+describe('Car',() => { // we can write any thing in string, its for our conviniance
+    it('can park',() => {// we can write any thing in string, its for our conviniance
+        // const car = new Car(); // beforeEach is replacing this
+        assert.equal(car.park(),'stopped'); // for using assert require assert library
+    });
+
+    it('can drive', () =>{
+        // const car = new Car(); // beforeEach is replacing this
+        assert.equal(car.drive(),'vroom');
+    });
+});
+
+// for using mocha test u have to write mocha in package.json
+/*
+like this
+"scripts":{
+    "test":"mocha"
+}
+*/
+
+// for running test u can write this command in terminal
+// npm run test
+```
