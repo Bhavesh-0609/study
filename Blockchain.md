@@ -607,3 +607,9 @@ app.run(host = '0.0.0.0', port = 5000)
 
 > ### Fist mining difficulty of bitcoin
 >![image](https://user-images.githubusercontent.com/92302123/153764348-70bd17c8-999b-40af-ad98-c2450efcca93.png)
+## Mining pools
+>A mining pool is a joint group of cryptocurrency miners who combine their computational resources over a network to strengthen the probability of finding a block or otherwise successfully mining for cryptocurrency.
+>
+> https://www.buybitcoinworldwide.com/mining/pools/
+> 
+> https://www.blockchain.com/charts/pools
