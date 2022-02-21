@@ -613,3 +613,8 @@ app.run(host = '0.0.0.0', port = 5000)
 > https://www.buybitcoinworldwide.com/mining/pools/
 > 
 > https://www.blockchain.com/charts/pools
+## Nonce range
+>![image](https://user-images.githubusercontent.com/92302123/155001670-f1a96a24-60c8-4bd9-8b6e-287caa19b83b.png)
+>![image](https://user-images.githubusercontent.com/92302123/155001743-5fae9748-15b0-489c-a8a7-5f0f79b50988.png)
+>
+>in every block there is unix timestamp which change every second and thats why nonce validity change every second.
