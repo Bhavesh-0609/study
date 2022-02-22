@@ -618,3 +618,15 @@ app.run(host = '0.0.0.0', port = 5000)
 >![image](https://user-images.githubusercontent.com/92302123/155001743-5fae9748-15b0-489c-a8a7-5f0f79b50988.png)
 >
 >in every block there is unix timestamp which change every second and thats why nonce validity change every second.
+## How miner pick trasactions (part 1)
+### what is mempool
+> The mempool (memory pool) is a smaller database of unconfirmed or pending transactions which every node keeps. When a transaction is confirmed by being included in a block, it is removed from the mempool.
+
+>In nonce range if any miner check all 4billion nonces less than in second than he can change block configuration like he will replace lowest transaction with other transaction and now he can go for other 4 billion nonces
+## CPU's vs GPU's vs ASIC's
+>![image](https://user-images.githubusercontent.com/92302123/155174250-1b6339ec-6ffb-4027-b50f-e25db6d60aa6.png)
+### Ethereum memory hardnes
+>https://www.vijaypradeep.com/blog/2017-04-28-ethereums-memory-hardness-explained
+
+## How mempools works
+>https://www.blockchain.com/btc/unconfirmed-transactions
