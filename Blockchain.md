@@ -630,3 +630,5 @@ app.run(host = '0.0.0.0', port = 5000)
 
 ## How mempools works
 >https://www.blockchain.com/btc/unconfirmed-transactions
+## Converting block bits into current target
+>![image](https://user-images.githubusercontent.com/92302123/155377707-2201afa0-0aa0-43ac-94f5-ccfbd92df82f.png)
