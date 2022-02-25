@@ -632,3 +632,17 @@ app.run(host = '0.0.0.0', port = 5000)
 >https://www.blockchain.com/btc/unconfirmed-transactions
 ## Converting block bits into current target
 >![image](https://user-images.githubusercontent.com/92302123/155377707-2201afa0-0aa0-43ac-94f5-ccfbd92df82f.png)
+# Cryptocurrency Transactions Intuition
+## UTXO 
+>What Is UTXO? The term UTXO refers to the amount of digital currency someone has left remaining after executing a cryptocurrency transaction such as bitcoin. The letters stand for `unspent transaction output.` Each bitcoin transaction begins with coins used to balance the ledger.
+## Transection fee
+> In UTXO if any btc left its count as transection fees
+## How wallet works
+> Wallet is just count you left UTXO's and show you on screen.
+## Signature, public key and private key
+>![image](https://user-images.githubusercontent.com/92302123/155754616-4afcd8e8-766c-49f8-8c73-5f024d9ddd67.png)
+>With private key and message/transaction u can generate signature wich is always unique
+>
+>For validate the message/transaction u can use validation function (requirement : transaction, signature and public key for using this function)
+## Signature and key demo
+>https://tools.superdatascience.com/blockchain/public-private-keys/signatures
