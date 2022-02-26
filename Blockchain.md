@@ -652,3 +652,5 @@ app.run(host = '0.0.0.0', port = 5000)
 >It was also intended to speed up the validation process by storing more transactions in a block.
 ## Public key vs Bitcoin address
 > Public keys are generated with eliptil function using private key and public address are generated with SHA256 using public key
+## Hierarchically Deterministic (HD) Wallets
+>A hierarchical deterministic (HD) wallet is a digital wallet commonly used to store the digital keys for holders of cryptocurrencies such as Bitcoin and Ethereum. Anyone with a copy of both the public and password-like private key can control the cryptocurrency in the account.
