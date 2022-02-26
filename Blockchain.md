@@ -646,3 +646,9 @@ app.run(host = '0.0.0.0', port = 5000)
 >For validate the message/transaction u can use validation function (requirement : transaction, signature and public key for using this function)
 ## Signature and key demo
 >https://tools.superdatascience.com/blockchain/public-private-keys/signatures
+## What Is Segregated Witness (SegWit)?
+>Segregated Witness (SegWit) refers to a change in the transaction format of Bitcoin. Its stated purpose as a protocol upgrade was to protect against transaction malleability and decrease transaction times by increasing block capacity. Transaction malleability refers to the possibility that tiny pieces of transaction information could be changed, invalidating new cryptocurrency blocks.
+>
+>It was also intended to speed up the validation process by storing more transactions in a block.
+## Public key vs Bitcoin address
+> Public keys are generated with eliptil function using private key and public address are generated with SHA256 using public key
