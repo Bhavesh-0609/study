@@ -654,3 +654,31 @@ app.run(host = '0.0.0.0', port = 5000)
 > Public keys are generated with eliptil function using private key and public address are generated with SHA256 using public key
 ## Hierarchically Deterministic (HD) Wallets
 >A hierarchical deterministic (HD) wallet is a digital wallet commonly used to store the digital keys for holders of cryptocurrencies such as Bitcoin and Ethereum. Anyone with a copy of both the public and password-like private key can control the cryptocurrency in the account.
+# Smart contract intuition
+## Plane of attack
+### What we will learn in this section:
+>   1. What is ethereum?
+>   2. What is a smart contract?
+>   3. Decentralized application (Dapps)
+>   4. Ethereum virtual machine & gas
+>   5. Decentralized autonomous organizations (DAOs)
+>   6. The DAO attack
+>   7. Soft and hard fork (Part 1)
+>   8. Soft and hard fork (Part 2) (Advanced tutorial)
+>   9. Initial coin offerings (ICOs)
+>   10. ICO case study
+>   11. Blockchain startups: White papers
+>   12. Blockchain and Web 3.0
+## What is a smart contract?
+> solidity is programing language and its used for ethereum blockchain and there is also bitcoin script which used for bitcoin blockchain
+> 
+> bitcoin-script is not-turing complete but solidity is. (There is no loops in bitcoin-script)
+> 
+> In ethereum blockchain
+>   - Each node has:
+>       - History of all smart contracts
+>       - History of all transactions
+>       - current state of all smart contracts
+## Decentralized applications (DApps)
+> It contains an interface for people to interact with something a blockchain
+> So DApp consists of a front end and a back end which is the smart contract
