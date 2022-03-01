@@ -5,7 +5,7 @@
 >
 >defination by wikipedia : A blockchain is a continuously growing list of records, called blocks, which are linked and secured using cryptography.
 >
->Genesis block : in blockchain the fist block is called as genesis block
+>Genesis block : in blockchain the first block is called as genesis block
 
 ## Understanding SHA256 - Hash
 > Hashes are like fingerprints
@@ -605,7 +605,7 @@ app.run(host = '0.0.0.0', port = 5000)
 > 
 > ![image](https://user-images.githubusercontent.com/92302123/153763015-27f5af70-befa-44bd-9741-de5a36620f62.png)
 
-> ### Fist mining difficulty of bitcoin
+> ### First mining difficulty of bitcoin
 >![image](https://user-images.githubusercontent.com/92302123/153764348-70bd17c8-999b-40af-ad98-c2450efcca93.png)
 ## Mining pools
 >A mining pool is a joint group of cryptocurrency miners who combine their computational resources over a network to strengthen the probability of finding a block or otherwise successfully mining for cryptocurrency.
