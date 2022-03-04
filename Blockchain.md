@@ -682,3 +682,22 @@ app.run(host = '0.0.0.0', port = 5000)
 ## Decentralized applications (DApps)
 > It contains an interface for people to interact with something a blockchain
 > So DApp consists of a front end and a back end which is the smart contract
+## Ethereum Virtual Machine
+>The Ethereum Virtual Machine is the software platform that developers can use to create decentralized applications (DApps) on Ethereum. This virtual machine is where all Ethereum accounts and smart contracts live.
+>### Gas
+>Gas fees are payments made by users to compensate for the computing energy required to process and validate transactions on the Ethereum blockchain. "Gas limit" refers to the maximum amount of gas (or energy) that you're willing to spend on a particular transaction.
+## What are DAOs?
+>DAOs are an effective and safe way to work with like-minded folks around the globe.
+>
+>Think of them like an internet-native business that's collectively owned and managed by its members. They have built-in treasuries that no one has the authority to access without the approval of the group. Decisions are governed by proposals and voting to ensure everyone in the organization has a voice.
+>
+>There's no CEO who can authorize spending based on their own whims and no chance of a dodgy CFO manipulating the books. Everything is out in the open and the rules around spending are baked into the DAO via its code.
+## Soft and hard fork
+> Hard fork = loosen rules
+> 
+> Soft fork = tighten rules
+> ![image](https://user-images.githubusercontent.com/92302123/156811130-a9b47415-cb25-400d-b557-429fac59d306.png)
+## ICO (Initial coin offering)
+> a process or event in which a company (especially a start-up) attempts to raise capital by selling a new cryptocurrency, which investors may purchase in the hope that the value of the cryptocurrency will increase, or to later exchange for services offered by that company.
+> ![image](https://user-images.githubusercontent.com/92302123/156811172-144fac3d-50b6-4be4-a544-95d0cbd217c2.png)
+
