@@ -701,3 +701,32 @@ app.run(host = '0.0.0.0', port = 5000)
 > a process or event in which a company (especially a start-up) attempts to raise capital by selling a new cryptocurrency, which investors may purchase in the hope that the value of the cryptocurrency will increase, or to later exchange for services offered by that company.
 > ![image](https://user-images.githubusercontent.com/92302123/156811172-144fac3d-50b6-4be4-a544-95d0cbd217c2.png)
 
+# Solidity
+```
+// HadCoin ICO
+
+// Version of compiler
+pragma solidity ^0.4.11
+
+contract hadcoin_ico{
+
+    // Intreducing the maximum number of hadcoin available for sale
+    uint public max_hadcoins = 1000000;
+
+    // Introducing the USD to hadcoin conversion rate
+    uint public usd_to_hadcoins = 1000;
+
+    // Introducing the total numbers that have bought by investors
+    uint public total_hadcoin_bought = 0;
+
+    // Mapping from the investors address to its equity in hadcoin and usd
+    mapping(address => uint) equity_hadcoin;
+    mapping(address => uint) equity_usd;
+
+    // Checking if an investor can by hadcoin
+    modifier can_buy_hadcoin(uint usd_invested){
+        require(usd_invested * usd_to_hadcoins + total_hadcoin_bought <= max_hadcoins);
+        _; // its mean that the function will only execute when above condition is true
+    }
+}
+```
