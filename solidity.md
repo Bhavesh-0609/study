@@ -265,18 +265,17 @@ const ganache = require('ganache-cli');
 const Web3 = require('web3'); // Web3 is constructor (W is capital its describe that Web3 is a constructor)
 const web3 = new Web3(ganache.provider()); // connecting with ganache using provider, here web3 is instance
 
-beforeEach(() => {
+let accounts;
+
+beforeEach(async () => {
     // Get a list of all accounts
-    web3.eth.getAccounts()
-        .then(fetchedAccounts => {
-            console.log(fetchedAccounts);
-        });
+    accounts = await web3.eth.getAccounts()
     // Use one of those accounts to deploy the contract
 });
 
 describe('Inbox', ()=>{
     it('deploys a contract', () => {
-        
+        console.log(accounts);
     });
 });
 ```
