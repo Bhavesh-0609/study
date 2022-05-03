@@ -95,3 +95,10 @@ done
 > ![6](https://static.javatpoint.com/linux/ss/images/shift-through-parameters4.png)
 >
 > Look at the above snapshot, a user can enter the name in the shell.
+> ### code
+```
+#!/usr/bin/zsh
+echo enter your name : 
+read name
+echo your name is : $name
+```
