@@ -61,4 +61,37 @@
 > For example, if number is 5, then $5 become $1, $6 become $2 and so on.
 > ### Example:
 > The shift command is mostly used when arguments are unknown. Arguments are processed in a while loop with a condition of (( $# )). this condition holds true as long as arguments are not zero. Number of arguments are reduced each time as the shift command executes.
+>
 > ![3](https://static.javatpoint.com/linux/ss/images/shift-through-parameters1.png)
+>  
+>  Look at the above snapshot, this is our script.
+>  
+> ![4](https://static.javatpoint.com/linux/ss/images/shift-through-parameters2.png)
+>
+> Look at the above snapshot, this is the output of the above script.
+> #### Code
+```
+#!/usr/bin/zsh
+
+if [ "$#" == "0" ]
+ then
+  echo pass at least one parameter.
+  exit 1
+fi
+
+while (( $# ))
+ do
+  echo you gave me $1
+  shift
+done
+```
+## read command
+> The read command allows a user to provide the runtime input
+>  
+> ![5](https://static.javatpoint.com/linux/ss/images/shift-through-parameters3.png)
+>  
+> Look at the above snapshot, this is our script using read command.
+>
+> ![6](https://static.javatpoint.com/linux/ss/images/shift-through-parameters4.png)
+>
+> Look at the above snapshot, a user can enter the name in the shell.
